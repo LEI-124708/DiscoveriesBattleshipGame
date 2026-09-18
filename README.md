@@ -66,9 +66,9 @@ Para esta versão do jogo Batalha Naval, os tipos de navios são inspirados na �
 
 <style>
     .center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
     }
 </style>
