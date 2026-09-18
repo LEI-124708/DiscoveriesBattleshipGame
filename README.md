@@ -15,16 +15,16 @@
 
 
 ## Regras
-Cada jogador começa por construir duas grelhas quadriculadas iguais, com dimensões de **10×10**. Uma grelha representa o seu próprio mar e a outra representa o mar do adversário.
+> Cada jogador começa por construir duas grelhas quadriculadas iguais, com dimensões de **10×10**. Uma grelha representa o seu próprio mar e a outra representa o mar do adversário.
 
-De seguida, cada jogador deverá posicionar os seus navios na sua grelha (ver [Tipos de Navios](#tipos-de-navios)), respeitando a regra de que os navios **não podem tocar entre si**, nem horizontal, vertical ou diagonalmente.
+> De seguida, cada jogador deverá posicionar os seus navios na sua grelha (ver [Tipos de Navios](#tipos-de-navios)), respeitando a regra de que os navios **não podem tocar entre si**, nem horizontal, vertical ou diagonalmente.
 
-As coordenadas são representadas pelo par **(x, y)**, onde **x, y ∈ [0, 9]**.
+> As coordenadas são representadas pelo par **(x, y)**, onde **x, y ∈ [0, 9]**.
 
 
 ## Tipos de Navios
 
-Para esta versão do jogo Batalha Naval, os tipos de navios são inspirados na épocsa dos Descobrimentos. Cada jogador dispõe de uma frota de navios, com os seguintes tipos:
+>Para esta versão do jogo Batalha Naval, os tipos de navios são inspirados na épocsa dos Descobrimentos. Cada jogador dispõe de uma frota de navios, com os seguintes tipos:
 
 | Navio     | Dimensão  | #Navios   |
 | --------- | --------- | --------- |
@@ -33,17 +33,6 @@ Para esta versão do jogo Batalha Naval, os tipos de navios são inspirados na �
 | Nau       |   3       |   2       |
 | Caravela  |   2       |   3       |
 | Barca     |   1       |   4       |
-
-
-
-
-
-
-
-
-
-
-
 
 
 ### Fotografias:
