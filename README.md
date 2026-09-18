@@ -35,7 +35,7 @@ Para esta versão do jogo Batalha Naval, os tipos de navios são inspirados na �
 
 
 
-Fotografias:
+### Fotografias:
 
 <img src="images/Galeao.jpg" alt="galeão" class="center" width="200"></image>
 
@@ -44,9 +44,13 @@ Fotografias:
 <img src="images/submarino.jpg" alt="submarino" class="center" width="200"></image>
 
 
-Referências:
+#### Referências:
 
-[]()
+> Wikipedia contributors. (n.d.). Battleship (game). In *Wikipedia*. Retrieved September 18, 2026, from [https://en.wikipedia.org/wiki/Battleship_(game)](https://en.wikipedia.org/wiki/Battleship_\(game\))
+
+>Colaboradores da Wikipédia. (s.d.). Galeão. Em *Wikipédia, a enciclopédia livre*. Consultado em 18 de setembro de 2026, em [https://pt.wikipedia.org/wiki/Galeão](https://pt.wikipedia.org/wiki/Gale%C3%A3o)
+
+> Colaboradores da Wikipédia. (s.d.). Submarino. Em *Wikipédia, a enciclopédia livre*. Consultado em 18 de setembro de 2026, em [https://pt.wikipedia.org/wiki/Submarino](https://pt.wikipedia.org/wiki/Submarino)
 
 
 
