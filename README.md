@@ -1,5 +1,6 @@
 # Battleship
-![battleship-game](/images/battleship.jpg)
+
+<img src="images/battleship.jpg" alt="battleship" width="200"></image>
 
 ## Grupo Adamastor
 | Curso |    Nome       | Número |
@@ -27,11 +28,28 @@
 
 
 
-
 Fotografias:
 
-![Galeão](images/Galeao.jpg)
-![Navio de 4 canhões](images/4canhões.jpg)
-![Submarino](images/submarino.jpg)
+<img src="images/Galeao.jpg" alt="galeão" class="center" width="200"></image>
+
+<img src="images/4canhões.jpg" alt="4 canhões" class="center" width="200"></image>
+
+<img src="images/submarino.jpg" alt="submarino" class="center" width="200"></image>
+
 
 Referências:
+
+[]()
+
+
+
+
+
+<styles>
+    .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    }
+</styles>
