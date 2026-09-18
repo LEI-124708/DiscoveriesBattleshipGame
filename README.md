@@ -1,6 +1,9 @@
 # Battleship
 
-<img src="images/battleship.jpg" alt="battleship" width="200"></image>
+
+<p align="center">
+    <img src="images/battleship.jpg" alt="battleship" width="200"></image>
+</p>
 
 ## Grupo Adamastor
 | Curso |    Nome       | Número |
@@ -45,12 +48,20 @@ Para esta versão do jogo Batalha Naval, os tipos de navios são inspirados na �
 
 ### Fotografias:
 
-<img src="images/Galeao.jpg" alt="galeão" class="center" width="200"></image>
+<p align="center">
+    <img src="images/Galeao.jpg" 
+    alt="galeão" 
+    width="200"></image>
+</p>
 
-<img src="images/4canhões.jpg" alt="4 canhões" class="center" width="200"></image>
+<p align="center">
+    <img src="images/4canhões.jpg" alt="4 canhões" class="center" width="200"></image>
+</p>
 
-<img src="images/submarino.jpg" alt="submarino" class="center" width="200"></image>
 
+<p align="center">
+    <img src="images/submarino.jpg" alt="submarino" class="center" width="200"></image>
+</p>
 
 #### Referências:
 
@@ -60,15 +71,3 @@ Para esta versão do jogo Batalha Naval, os tipos de navios são inspirados na �
 
 > Colaboradores da Wikipédia. (s.d.). Submarino. Em *Wikipédia, a enciclopédia livre*. Consultado em 18 de setembro de 2026, em [https://pt.wikipedia.org/wiki/Submarino](https://pt.wikipedia.org/wiki/Submarino)
 
-
-
-
-
-<style>
-    .center {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width: 50%;
-    }
-</style>
