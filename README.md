@@ -1,6 +1,9 @@
 # Battleship
 
-<img src="images/battleship.jpg" alt="battleship" width="200"></image>
+
+<p align="center">
+    <img src="images/battleship.jpg" alt="battleship" width="200"></image>
+</p>
 
 ## Grupo Adamastor
 | Curso |    Nome       | Número |
