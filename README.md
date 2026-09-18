@@ -10,10 +10,17 @@
 | LEI   | Pedro Victor  | 129823 |
 
 
+### Tipos de Navios
 
+Para esta versão do jogo Batalha Naval, os tipos de navios são inspirados na épocsa dos Descobrimentos. Cada jogador dispõe de uma frota de navios, com os seguintes tipos:
 
-
-
+| Navio     | Dimensão  | #Navios   |
+| --------- | --------- | --------- |
+| Galeão    |   5       |   1       |
+| Fragata   |   4       |   1       |
+| Nau       |   3       |   2       |
+| Caravela  |   2       |   3       |
+| Barca     |   1       |   4       |
 
 
 
