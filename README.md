@@ -5,6 +5,8 @@
     <img src="images/battleship.jpg" alt="battleship" width="200"></image>
 </p>
 
+-----------
+
 ## Grupo Adamastor
 | Curso |    Nome       | Número |
 | ---   | ---           | ---    |
@@ -13,6 +15,7 @@
 | LEI   | Daniel Santos | 131591 |
 | LEI   | Pedro Victor  | 129823 |
 
+-----------
 
 ## Regras
 > Cada jogador começa por construir duas grelhas quadriculadas iguais, com dimensões de **10×10**. Uma grelha representa o seu próprio mar e a outra representa o mar do adversário.
@@ -21,6 +24,7 @@
 
 > As coordenadas são representadas pelo par **(x, y)**, onde **x, y ∈ [0, 9]**.
 
+-----------
 
 ## Tipos de Navios
 
@@ -34,6 +38,7 @@
 | Caravela  |   2       |   3       |
 | Barca     |   1       |   4       |
 
+-----------
 
 ### Fotografias:
 
@@ -52,6 +57,8 @@
     <img src="images/submarino.jpg" alt="submarino" class="center" width="200"></image>
 </p>
 
+-------------
+
 #### Referências:
 
 > Wikipedia contributors. (n.d.). Battleship (game). In *Wikipedia*. Retrieved September 18, 2026, from [https://en.wikipedia.org/wiki/Battleship_(game)](https://en.wikipedia.org/wiki/Battleship_\(game\))
@@ -60,3 +67,8 @@
 
 > Colaboradores da Wikipédia. (s.d.). Submarino. Em *Wikipédia, a enciclopédia livre*. Consultado em 18 de setembro de 2026, em [https://pt.wikipedia.org/wiki/Submarino](https://pt.wikipedia.org/wiki/Submarino)
 
+
+
+
+
+---------
