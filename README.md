@@ -11,7 +11,15 @@
 | LEI   | Pedro Victor  | 129823 |
 
 
-### Tipos de Navios
+## Regras
+Cada jogador começa por construir duas grelhas quadriculadas iguais, com dimensões de **10×10**. Uma grelha representa o seu próprio mar e a outra representa o mar do adversário.
+
+De seguida, cada jogador deverá posicionar os seus navios na sua grelha (ver **Regras #Navios**), respeitando a regra de que os navios **não podem tocar entre si**, nem horizontal, vertical ou diagonalmente.
+
+As coordenadas são representadas pelo par **(x, y)**, onde **x, y ∈ [0, 9]**.
+
+
+## Tipos de Navios
 
 Para esta versão do jogo Batalha Naval, os tipos de navios são inspirados na épocsa dos Descobrimentos. Cada jogador dispõe de uma frota de navios, com os seguintes tipos:
 
