@@ -8,8 +8,15 @@ public class Frigate extends Ship {
     private static final String NAME = "Fragata";
 
     /**
-     * @param bearing
-     * @param pos
+     * Cria uma embarcação do tipo fragata com a orientação e posição inicial
+     * especificadas. A fragata ocupa SIZE posições consecutivas no tabuleiro,
+     * na vertical quando orientada a NORTH ou SOUTH, ou na horizontal quando
+     * orientada a EAST ou WEST.
+     *
+     * @param bearing orientação da fragata no tabuleiro
+     * @param pos posição inicial da fragata no tabuleiro
+     * @throws IllegalArgumentException se a orientação especificada não for
+     *                                  válida para uma fragata
      */
     public Frigate(Compass bearing, IPosition pos) throws IllegalArgumentException {
         super(Frigate.NAME, bearing, pos);
@@ -29,10 +36,10 @@ public class Frigate extends Ship {
         }
     }
 
-    /*
-     * (non-Javadoc)
+    /**
+     * Obtém o tamanho da carraca.
      *
-     * @see battleship.Ship#getSize()
+     * @return número de posições ocupadas pela carraca no tabuleiro
      */
     @Override
     public Integer getSize() {
