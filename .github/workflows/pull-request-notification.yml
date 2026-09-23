@@ -1,0 +1,45 @@
+name: Pull Request Notification
+
+on:
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - ready_for_review
+      - review_requested
+
+permissions:
+  contents: read
+  pull-requests: write
+  issues: write
+
+jobs:
+  notify:
+    name: Notify PR participants
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Add notification comment
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPOSITORY: ${{ github.repository }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+        run: |
+          AUTHOR=$(jq -r '.pull_request.user.login' "$GITHUB_EVENT_PATH")
+
+          REVIEWERS=$(jq -r '
+            [.pull_request.requested_reviewers[].login | "@" + .]
+            | join(" ")
+          ' "$GITHUB_EVENT_PATH")
+
+          if [ -z "$REVIEWERS" ]; then
+            REVIEWERS="Nenhum reviewer foi ainda selecionado."
+          fi
+
+          gh pr comment "$PR_NUMBER" \
+            --repo "$REPOSITORY" \
+            --body "🔔 @$AUTHOR, o Pull Request está pronto para revisão.
+
+          **Reviewers:** $REVIEWERS
+
+          Por favor, revejam as alterações antes do merge."
