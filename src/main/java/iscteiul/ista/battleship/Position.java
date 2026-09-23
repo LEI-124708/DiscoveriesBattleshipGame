@@ -71,50 +71,48 @@ public class Position implements IPosition {
         }
     }
 
-    /*
-     * (non-Javadoc)
+    /**
+     * Verifica se esta posição é igual a outra posição.
+     * Duas posições são consideradas iguais quando têm a mesma linha e coluna.
      *
-     * @see battleship.IPosition#isAdjacentTo(battleship.IPosition)
+     * @param otherPosition objeto a comparar
+     * @return true se as posições forem iguais, false caso contrário
      */
     @Override
     public boolean isAdjacentTo(IPosition other) {
         return (Math.abs(this.getRow() - other.getRow()) <= 1 && Math.abs(this.getColumn() - other.getColumn()) <= 1);
     }
 
-    /*
-     * (non-Javadoc)
-     *
-     * @see battleship.IPosition#occupy()
+    /**
+     * Marca esta posição como ocupada por um navio.
      */
     @Override
     public void occupy() {
         isOccupied = true;
     }
 
-    /*
-     * (non-Javadoc)
-     *
-     * @see battleship.IPosition#shoot()
+    /**
+     * Marca esta posição como atingida por um tiro.
      */
     @Override
     public void shoot() {
         isHit = true;
     }
 
-    /*
-     * (non-Javadoc)
+    /**
+     * Verifica se esta posição está ocupada.
      *
-     * @see battleship.IPosition#isOccupied()
+     * @return true se estiver ocupada, false caso contrário
      */
     @Override
     public boolean isOccupied() {
         return isOccupied;
     }
 
-    /*
-     * (non-Javadoc)
+    /**
+     * Verifica se esta posição já foi atingida.
      *
-     * @see battleship.IPosition#isHit()
+     * @return true se já tiver sido atingida, false caso contrário
      */
     @Override
     public boolean isHit() {
