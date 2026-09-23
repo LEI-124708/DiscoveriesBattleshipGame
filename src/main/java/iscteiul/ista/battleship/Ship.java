@@ -1,5 +1,18 @@
 /**
+ * Representa a implementação base de um navio do jogo.
  *
+ * <p>Um navio possui uma categoria, uma orientação, uma posição inicial
+ * e uma lista com todas as posições ocupadas no tabuleiro.</p>
+ *
+ * <p>As subclasses determinam o tamanho e preenchem a lista de posições
+ * ocupadas pelo respetivo tipo de navio.</p>
+ *
+ * @see IShip
+ * @see Barge
+ * @see Caravel
+ * @see Carrack
+ * @see Frigate
+ * @see Galleon
  */
 package iscteiul.ista.battleship;
 
