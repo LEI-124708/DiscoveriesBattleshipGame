@@ -1,6 +1,5 @@
 # Battleship
 
-
 <p align="center">
     <img src="images/battleship.jpg" alt="battleship" width="200"></image>
 </p>
@@ -25,6 +24,19 @@
 > As coordenadas são representadas pelo par **(x, y)**, onde **x, y ∈ [0, 9]**.
 
 -----------
+
+## Regras Adicionais
+Depois de os dois jogadores posicionarem as suas frotas, o jogo decorre por turnos.
+
+Para cada turno, o jogador efetua uma rajada de três tiros, indicando as coordenadas **(x, y)** correspondentes às posições que este quer atacar no tabuleiro do oponente.
+
+O oponente indica o resultado de cada tiro:
+- **Água**: o tiro não atingiu nenhum navio.
+- **Acerto**: o tiro atingiu um navio.
+- **Afundado**: todas as posições ocupadas por este navio foram atingidas.
+
+A partida se encerra quando um dos jogadores atinge todos os navios de seu adversário.
+
 
 ## Tipos de Navios
 
