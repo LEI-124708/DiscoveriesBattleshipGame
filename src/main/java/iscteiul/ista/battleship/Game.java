@@ -1,5 +1,5 @@
 /**
- *
+ * Importa atributos de battleship para criar o jogo.
  */
 package iscteiul.ista.battleship;
 
@@ -7,8 +7,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author fba
+ * Representa uma partida de Batalha Naval.
+ * Gere os tiros efetuados, os acertos e os navios afundados.
  *
+ * @author fba
  */
 public class Game implements IGame {
     private IFleet fleet;
@@ -21,7 +23,9 @@ public class Game implements IGame {
 
 
     /**
-     * @param fleet
+     * Cria um novo jogo com a frota indicada.
+     *
+     * @param fleet frota utilizada no jogo
      */
     public Game(IFleet fleet) {
         shots = new ArrayList<>();
@@ -30,10 +34,11 @@ public class Game implements IGame {
         this.fleet = fleet;
     }
 
-    /*
-     * (non-Javadoc)
+    /**
+     * Efetua um tiro na posição indicada.
      *
-     * @see battleship.IGame#fire(battleship.IPosition)
+     * @param pos posição onde é efetuado o tiro
+     * @return o navio afundado, caso exista, ou null caso contrário
      */
     @Override
     public IShip fire(IPosition pos) {
@@ -58,60 +63,60 @@ public class Game implements IGame {
         return null;
     }
 
-    /*
-     * (non-Javadoc)
+    /**
+     * Devolve a lista de tiros efetuados.
      *
-     * @see battleship.IGame#getShots()
+     * @return lista de posições atingidas
      */
     @Override
     public List<IPosition> getShots() {
         return shots;
     }
 
-    /*
-     * (non-Javadoc)
+    /**
+     * Devolve o número de tiros repetidos.
      *
-     * @see battleship.IGame#getRepeatedShots()
+     * @return número de tiros repetidos
      */
     @Override
     public int getRepeatedShots() {
         return this.countRepeatedShots;
     }
 
-    /*
-     * (non-Javadoc)
+    /**
+     * Devolve o número de tiros inválidos.
      *
-     * @see battleship.IGame#getInvalidShots()
+     * @return número de tiros inválidos
      */
     @Override
     public int getInvalidShots() {
         return this.countInvalidShots;
     }
 
-    /*
-     * (non-Javadoc)
+    /**
+     * Devolve o número de tiros que acertaram num navio.
      *
-     * @see battleship.IGame#getHits()
+     * @return número de acertos
      */
     @Override
     public int getHits() {
         return this.countHits;
     }
 
-    /*
-     * (non-Javadoc)
+    /**
+     * Devolve o número de navios afundados.
      *
-     * @see battleship.IGame#getSunkShips()
+     * @return número de navios afundados
      */
     @Override
     public int getSunkShips() {
         return this.countSinks;
     }
 
-    /*
-     * (non-Javadoc)
+    /**
+     * Devolve o número de navios que ainda estão a flutuar.
      *
-     * @see battleship.IGame#getRemainingShips()
+     * @return número de navios restantes
      */
     @Override
     public int getRemainingShips() {
@@ -152,7 +157,7 @@ public class Game implements IGame {
 
 
     /**
-     * Prints the board showing valid shots that have been fired
+     * Mostra o tabuleiro com os tiros válidos efetuados.
      */
     public void printValidShots() {
         printBoard(getShots(), 'X');
@@ -160,7 +165,7 @@ public class Game implements IGame {
 
 
     /**
-     * Prints the board showing the fleet
+     * Mostra o tabuleiro com a posição dos navios da frota.
      */
     public void printFleet() {
         List<IPosition> shipPositions = new ArrayList<IPosition>();
