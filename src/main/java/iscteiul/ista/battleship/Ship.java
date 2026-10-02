@@ -38,9 +38,9 @@ public abstract class Ship implements IShip {
      * @param pos posição inicial do navio
      * @return o navio criado ou {@code null} quando a categoria não é reconhecida
      */
-static Ship buildShip(String shipKind, Compass bearing, Position pos) {
     static Ship buildShip(String shipKind, Compass bearing, Position pos) {
         Ship s;
+
         switch (shipKind) {
             case BARCA:
                 s = new Barge(bearing, pos);
@@ -60,9 +60,9 @@ static Ship buildShip(String shipKind, Compass bearing, Position pos) {
             default:
                 s = null;
         }
+
         return s;
     }
-
 
     private String category;
     private Compass bearing;
