@@ -1,0 +1,84 @@
+*   19072f9 Merge remote-tracking branch 'origin/main'
+|\  
+| *   1ad33e8 Merge pull request #20 from LEI-124708/javadocs
+| |\  
+| | * 5b9e00b docs: adicionar Javadocs às embarcações
+| * |   52996cb Merge pull request #19 from LEI-124708/docs/javadoc-game
+| |\ \  
+| | * | c5ba24b Adicionado Javadoc para a classe Game
+| |/ /  
+* | | 93b48b1 "Criada pasta "Docs" contendo HTML do Javadoc + Modificações para compilar o projeto"
+* | | 005bd90 "Gerado o HTML do Javadoc do Projeto"
+|/ /  
+* |   591f151 Merge pull request #18 from LEI-124708/docs/javadoc-position
+|\ \  
+| |/  
+|/|   
+| * a97374b "Finalizado Javadoc da Classe Position"
+| * c752a8e "(1/2) Adicionar Javadoc à Classe Position"
+* |   d0603ae Merge pull request #17 from LEI-124708/javadoc---Ship,-Barge
+|\ \  
+| |/  
+|/|   
+| * 5dfcbeb Enhance Barge class documentation
+| * 2ffaefe Refactor JavaDoc comments in Ship.java
+| * f50996a Enhance Ship class documentation
+* |   a910306 Merge pull request #16 from LEI-124708/javadoc---Galleon,-Fleet-&-Caravel
+|\ \  
+| |/  
+|/|   
+| * cc353d0 Update Fleet.java
+| * b3959cb Update Galleon.java
+| * 5697ddb Update Caravel.java
+|/  
+*   26c3beb Merge pull request #7 from LEI-124708/actions/pr-notification
+|\  
+| * 27755d8 ci: add pull request notification workflow
+|/  
+*   358ea97 Merge pull request #4 from LEI-124708/docs/regras-adicionais
+|\  
+| * a7ae5ba Adicionada Secção "Regras Adicionais"
+* | a97263d Added labels.json
+* |   7387083 Merge pull request #3 from LEI-124708/Fixing-style-issue
+|\ \  
+| * | 2c1288d separators
+| * | db4f25a Merge branch 'main' into Fixing-style-issue
+| |\| 
+| * | 7ea58e3 Fixing spacing and styles
+* | | 76ea5e2 Create labels.yml
+| |/  
+|/|   
+* | fde1756 Adicionada Secção "Tipos de Navios"
+* | bdd1c04 Removida Secção "Tipos de Navios" (para correção de conta)
+* | bbc9ba3 Merge pull request #2 from LEI-124708/Fixing-style-issue
+|\| 
+| * 15481c1 align 2
+| * d91acad Resolução de styling, fazendo embed em cada elemento
+* | 724ca91 Merge pull request #1 from LEI-124708/Fixing-style-issue
+|\| 
+| * e40a7d9 Attempt #1
+|/  
+*   4390d7d Merge branch 'main' of https://github.com/josel1337/DiscoveriesBattleshipGame
+|\  
+| * fc5253e docs: fix rules
+| * c36b886 docs: add rules
+* | 90349ee Referencias
+|/  
+* fd1f6a4 typo
+*   679d24e Merge branch 'main' of https://github.com/josel1337/DiscoveriesBattleshipGame
+|\  
+| * 2754e1b Secção "Tipos de Navios" Adicionada
+* | bbd3ee6 fixing image width
+|/  
+* 5e37636 adicionar imagens
+* 7ad2f79 Revise README title and description for clarity
+*   f9f7221 Merge branch 'main' of https://github.com/josel1337/DiscoveriesBattleshipGame
+|\  
+| * 532dc4d Update README.md
+* | cde1a25 [REVISIT] adicionar imagens
+|/  
+* 7a81c21 Revise README title and description for clarity
+* c591273 Add JUnit BOM to dependency management
+* 678cb15 Remove JUnit Jupiter API dependency
+* 674bcdd Create README for Battleship Game
+* 41a6bab Initial version of Battleship Game

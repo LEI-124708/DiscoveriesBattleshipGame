@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Game.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Battleship</a> &gt; <a href="index.source.html" class="el_package">iscteiul.ista.battleship</a> &gt; <span class="el_source">Game.java</span></div><h1>Game.java</h1><pre class="source lang-java linenums">/**
+ * Importa atributos de battleship para criar o jogo.
+ */
+package iscteiul.ista.battleship;
+
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * Representa uma partida de Batalha Naval.
+ * Gere os tiros efetuados, os acertos e os navios afundados.
+ *
+ * @author fba
+ */
+public class Game implements IGame {
+    private IFleet fleet;
+    private List&lt;IPosition&gt; shots;
+
+    private Integer countInvalidShots;
+    private Integer countRepeatedShots;
+    private Integer countHits;
+    private Integer countSinks;
+
+
+    /**
+     * Cria um novo jogo com a frota indicada.
+     *
+     * @param fleet frota utilizada no jogo
+     */
+<span class="fc" id="L30">    public Game(IFleet fleet) {</span>
+<span class="fc" id="L31">        shots = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L32">        countInvalidShots = 0;</span>
+<span class="fc" id="L33">        countRepeatedShots = 0;</span>
+<span class="fc" id="L34">        this.fleet = fleet;</span>
+<span class="fc" id="L35">    }</span>
+
+    /**
+     * Efetua um tiro na posição indicada.
+     *
+     * @param pos posição onde é efetuado o tiro
+     * @return o navio afundado, caso exista, ou null caso contrário
+     */
+    @Override
+    public IShip fire(IPosition pos) {
+<span class="fc bfc" id="L45" title="All 2 branches covered.">        if (!validShot(pos))</span>
+<span class="fc" id="L46">            countInvalidShots++;</span>
+        else { // valid shot!
+<span class="fc bfc" id="L48" title="All 2 branches covered.">            if (repeatedShot(pos))</span>
+<span class="fc" id="L49">                countRepeatedShots++;</span>
+            else {
+<span class="fc" id="L51">                shots.add(pos);</span>
+<span class="fc" id="L52">                IShip s = fleet.shipAt(pos);</span>
+<span class="fc bfc" id="L53" title="All 2 branches covered.">                if (s != null) {</span>
+<span class="fc" id="L54">                    s.shoot(pos);</span>
+<span class="nc" id="L55">                    countHits++;</span>
+<span class="nc bnc" id="L56" title="All 2 branches missed.">                    if (!s.stillFloating()) {</span>
+<span class="nc" id="L57">                        countSinks++;</span>
+<span class="nc" id="L58">                        return s;</span>
+                    }
+                }
+            }
+        }
+<span class="fc" id="L63">        return null;</span>
+    }
+
+    /**
+     * Devolve a lista de tiros efetuados.
+     *
+     * @return lista de posições atingidas
+     */
+    @Override
+    public List&lt;IPosition&gt; getShots() {
+<span class="fc" id="L73">        return shots;</span>
+    }
+
+    /**
+     * Devolve o número de tiros repetidos.
+     *
+     * @return número de tiros repetidos
+     */
+    @Override
+    public int getRepeatedShots() {
+<span class="fc" id="L83">        return this.countRepeatedShots;</span>
+    }
+
+    /**
+     * Devolve o número de tiros inválidos.
+     *
+     * @return número de tiros inválidos
+     */
+    @Override
+    public int getInvalidShots() {
+<span class="fc" id="L93">        return this.countInvalidShots;</span>
+    }
+
+    /**
+     * Devolve o número de tiros que acertaram num navio.
+     *
+     * @return número de acertos
+     */
+    @Override
+    public int getHits() {
+<span class="nc" id="L103">        return this.countHits;</span>
+    }
+
+    /**
+     * Devolve o número de navios afundados.
+     *
+     * @return número de navios afundados
+     */
+    @Override
+    public int getSunkShips() {
+<span class="nc" id="L113">        return this.countSinks;</span>
+    }
+
+    /**
+     * Devolve o número de navios que ainda estão a flutuar.
+     *
+     * @return número de navios restantes
+     */
+    @Override
+    public int getRemainingShips() {
+<span class="fc" id="L123">        List&lt;IShip&gt; floatingShips = fleet.getFloatingShips();</span>
+<span class="fc" id="L124">        return floatingShips.size();</span>
+    }
+
+    private boolean validShot(IPosition pos) {
+<span class="fc bfc" id="L128" title="All 6 branches covered.">        return (pos.getRow() &gt;= 0 &amp;&amp; pos.getRow() &lt;= Fleet.BOARD_SIZE &amp;&amp; pos.getColumn() &gt;= 0</span>
+<span class="fc bfc" id="L129" title="All 2 branches covered.">                &amp;&amp; pos.getColumn() &lt;= Fleet.BOARD_SIZE);</span>
+    }
+
+    private boolean repeatedShot(IPosition pos) {
+<span class="fc bfc" id="L133" title="All 2 branches covered.">        for (int i = 0; i &lt; shots.size(); i++)</span>
+<span class="fc bfc" id="L134" title="All 2 branches covered.">            if (shots.get(i).equals(pos))</span>
+<span class="fc" id="L135">                return true;</span>
+<span class="fc" id="L136">        return false;</span>
+    }
+
+
+    public void printBoard(List&lt;IPosition&gt; positions, Character marker) {
+<span class="fc" id="L141">        char[][] map = new char[Fleet.BOARD_SIZE][Fleet.BOARD_SIZE];</span>
+
+<span class="fc bfc" id="L143" title="All 2 branches covered.">        for (int r = 0; r &lt; Fleet.BOARD_SIZE; r++)</span>
+<span class="fc bfc" id="L144" title="All 2 branches covered.">            for (int c = 0; c &lt; Fleet.BOARD_SIZE; c++)</span>
+<span class="fc" id="L145">                map[r][c] = '.';</span>
+
+<span class="fc bfc" id="L147" title="All 2 branches covered.">        for (IPosition pos : positions)</span>
+<span class="fc" id="L148">            map[pos.getRow()][pos.getColumn()] = marker;</span>
+
+<span class="fc bfc" id="L150" title="All 2 branches covered.">        for (int row = 0; row &lt; Fleet.BOARD_SIZE; row++) {</span>
+<span class="fc bfc" id="L151" title="All 2 branches covered.">            for (int col = 0; col &lt; Fleet.BOARD_SIZE; col++)</span>
+<span class="fc" id="L152">                System.out.print(map[row][col]);</span>
+<span class="fc" id="L153">            System.out.println();</span>
+        }
+
+<span class="fc" id="L156">    }</span>
+
+
+    /**
+     * Mostra o tabuleiro com os tiros válidos efetuados.
+     */
+    public void printValidShots() {
+<span class="fc" id="L163">        printBoard(getShots(), 'X');</span>
+<span class="fc" id="L164">    }</span>
+
+
+    /**
+     * Mostra o tabuleiro com a posição dos navios da frota.
+     */
+    public void printFleet() {
+<span class="fc" id="L171">        List&lt;IPosition&gt; shipPositions = new ArrayList&lt;IPosition&gt;();</span>
+
+<span class="fc bfc" id="L173" title="All 2 branches covered.">        for (IShip s : fleet.getShips())</span>
+<span class="fc" id="L174">            shipPositions.addAll(s.getPositions());</span>
+
+<span class="fc" id="L176">        printBoard(shipPositions, '#');</span>
+<span class="fc" id="L177">    }</span>
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.14.202510111229</span></div></body></html>

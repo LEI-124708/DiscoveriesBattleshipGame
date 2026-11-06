@@ -1,0 +1,8 @@
+{
+  "source_tree": "9713b7680395b3d63b6330dffbd6dd0f51c5172c",
+  "tool": "lizard 1.17.31",
+  "scope": "all src/main/java; supplementary current-source metrics",
+  "normalization": "(value-min)/(max-min); zero when max=min",
+  "not_metrics_tree": true,
+  "methods": 80
+}
