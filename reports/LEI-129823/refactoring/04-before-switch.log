@@ -6,10 +6,10 @@
 [INFO] --------------------------------[ jar ]---------------------------------
 [INFO] 
 [INFO] --- clean:3.2.0:clean (default-clean) @ Battleship ---
-[INFO] Deleting /Users/pedro/Documents/Codex/2026-11-06/referenced-chatgpt-conversation-this-is-an/work/DiscoveriesBattleshipGame/target
+[INFO] Deleting ${PROJECT_ROOT}/target
 [INFO] 
 [INFO] --- jacoco:0.8.14:prepare-agent (default) @ Battleship ---
-[INFO] argLine set to -javaagent:/Users/pedro/Documents/Codex/2026-11-06/referenced-chatgpt-conversation-this-is-an/work/DiscoveriesBattleshipGame/../m2/org/jacoco/org.jacoco.agent/0.8.14/org.jacoco.agent-0.8.14-runtime.jar=destfile=/Users/pedro/Documents/Codex/2026-11-06/referenced-chatgpt-conversation-this-is-an/work/DiscoveriesBattleshipGame/target/jacoco.exec
+[INFO] argLine set to -javaagent:${PROJECT_ROOT}/../m2/org/jacoco/org.jacoco.agent/0.8.14/org.jacoco.agent-0.8.14-runtime.jar=destfile=${PROJECT_ROOT}/target/jacoco.exec
 [INFO] 
 [INFO] --- resources:3.4.0:resources (default-resources) @ Battleship ---
 [INFO] Copying 1 resource from src/main/resources to target/classes
@@ -26,7 +26,7 @@
   Use -proc:none to disable annotation processing.
 [INFO] 
 [INFO] --- resources:3.4.0:testResources (default-testResources) @ Battleship ---
-[INFO] skip non existing resourceDirectory /Users/pedro/Documents/Codex/2026-11-06/referenced-chatgpt-conversation-this-is-an/work/DiscoveriesBattleshipGame/src/test/resources
+[INFO] skip non existing resourceDirectory ${PROJECT_ROOT}/src/test/resources
 [INFO] 
 [INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ Battleship ---
 [INFO] Recompiling the module because of changed dependency.
@@ -46,8 +46,8 @@
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running iscteiul.ista.AppTest
-2026-11-06T13:21:02.578466Z main INFO Starting configuration XmlConfiguration[location=/Users/pedro/Documents/Codex/2026-11-06/referenced-chatgpt-conversation-this-is-an/work/DiscoveriesBattleshipGame/target/classes/log4j2.xml, lastModified=2026-11-06T13:20:59.426Z]...
-2026-11-06T13:21:02.579878Z main INFO Configuration XmlConfiguration[location=/Users/pedro/Documents/Codex/2026-11-06/referenced-chatgpt-conversation-this-is-an/work/DiscoveriesBattleshipGame/target/classes/log4j2.xml, lastModified=2026-11-06T13:20:59.426Z] started.
+2026-11-06T13:21:02.578466Z main INFO Starting configuration XmlConfiguration[location=${PROJECT_ROOT}/target/classes/log4j2.xml, lastModified=2026-11-06T13:20:59.426Z]...
+2026-11-06T13:21:02.579878Z main INFO Configuration XmlConfiguration[location=${PROJECT_ROOT}/target/classes/log4j2.xml, lastModified=2026-11-06T13:20:59.426Z] started.
 2026-11-06T13:21:02.581848Z main INFO Stopping configuration org.apache.logging.log4j.core.config.DefaultConfiguration@c27a3a2...
 2026-11-06T13:21:02.582226Z main INFO Configuration org.apache.logging.log4j.core.config.DefaultConfiguration@c27a3a2 stopped.
 [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.558 s -- in iscteiul.ista.AppTest
@@ -80,10 +80,10 @@
 [INFO] 
 [INFO] 
 [INFO] --- jar:3.5.0:jar (default-jar) @ Battleship ---
-[INFO] Building jar: /Users/pedro/Documents/Codex/2026-11-06/referenced-chatgpt-conversation-this-is-an/work/DiscoveriesBattleshipGame/target/Battleship-1.0-SNAPSHOT.jar
+[INFO] Building jar: ${PROJECT_ROOT}/target/Battleship-1.0-SNAPSHOT.jar
 [INFO] 
 [INFO] --- jacoco:0.8.14:report (coverage) @ Battleship ---
-[INFO] Loading execution data file /Users/pedro/Documents/Codex/2026-11-06/referenced-chatgpt-conversation-this-is-an/work/DiscoveriesBattleshipGame/target/jacoco.exec
+[INFO] Loading execution data file ${PROJECT_ROOT}/target/jacoco.exec
 [INFO] Analyzed bundle 'Battleship' with 13 classes
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
