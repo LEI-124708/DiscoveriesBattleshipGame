@@ -240,7 +240,7 @@
   Use -proc:none to disable annotation processing.
 [INFO] 
 [INFO] --- resources:3.4.0:testResources (default-testResources) @ Battleship ---
-[INFO] skip non existing resourceDirectory /Users/pedro/Documents/Codex/2026-11-06/referenced-chatgpt-conversation-this-is-an/work/DiscoveriesBattleshipGame/src/test/resources
+[INFO] skip non existing resourceDirectory ${PROJECT_ROOT}/src/test/resources
 [INFO] 
 [INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ Battleship ---
 [INFO] Recompiling the module because of changed dependency.
