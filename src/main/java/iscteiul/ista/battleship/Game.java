@@ -120,8 +120,7 @@ public class Game implements IGame {
      */
     @Override
     public int getRemainingShips() {
-        List<IShip> floatingShips = fleet.getFloatingShips();
-        return floatingShips.size();
+        return fleet.getFloatingShips().size();
     }
 
     private boolean validShot(IPosition pos) {
