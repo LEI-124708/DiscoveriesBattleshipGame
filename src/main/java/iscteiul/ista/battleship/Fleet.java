@@ -68,7 +68,7 @@ public class Fleet implements IFleet {
      *   <li>the ship fits entirely inside the board
      *       ({@link #isInsideBoard(IShip)});</li>
      *   <li>the ship is not too close to any ship already in the fleet
-     *       ({@link #colisionRisk(IShip)}).</li>
+     *       ({@link #hasCollisionRisk(IShip)}).</li>
      * </ul>
      *
      * @param s the ship to add
@@ -78,7 +78,7 @@ public class Fleet implements IFleet {
     @Override
     public boolean addShip(IShip s) {
         boolean result = false;
-        if ((ships.size() <= FLEET_SIZE) && (isInsideBoard(s)) && (!colisionRisk(s))) {
+        if ((ships.size() <= FLEET_SIZE) && (isInsideBoard(s)) && (!hasCollisionRisk(s))) {
             ships.add(s);
             result = true;
         }
@@ -157,7 +157,7 @@ public class Fleet implements IFleet {
      * @return {@code true} if {@code s} is too close to at least one ship
      *         already in the fleet
      */
-    private boolean colisionRisk(IShip s) {
+    private boolean hasCollisionRisk(IShip s) {
         for (int i = 0; i < ships.size(); i++) {
             if (ships.get(i).tooCloseTo(s))
                 return true;
