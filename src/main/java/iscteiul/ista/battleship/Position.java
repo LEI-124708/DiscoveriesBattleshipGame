@@ -80,7 +80,8 @@ public class Position implements IPosition {
      */
     @Override
     public boolean isAdjacentTo(IPosition other) {
-        return (Math.abs(this.getRow() - other.getRow()) <= 1 && Math.abs(this.getColumn() - other.getColumn()) <= 1);
+        boolean rowsAreAdjacent = Math.abs(this.getRow() - other.getRow()) <= 1;
+        return rowsAreAdjacent && Math.abs(this.getColumn() - other.getColumn()) <= 1;
     }
 
     /**

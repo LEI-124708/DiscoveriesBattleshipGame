@@ -120,8 +120,7 @@ public class Game implements IGame {
      */
     @Override
     public int getRemainingShips() {
-        List<IShip> floatingShips = fleet.getFloatingShips();
-        return floatingShips.size();
+        return fleet.getFloatingShips().size();
     }
 
     private boolean validShot(IPosition pos) {
@@ -137,12 +136,16 @@ public class Game implements IGame {
     }
 
 
-    public void printBoard(List<IPosition> positions, Character marker) {
+    private char[][] createEmptyBoard() {
         char[][] map = new char[Fleet.BOARD_SIZE][Fleet.BOARD_SIZE];
-
         for (int r = 0; r < Fleet.BOARD_SIZE; r++)
             for (int c = 0; c < Fleet.BOARD_SIZE; c++)
                 map[r][c] = '.';
+        return map;
+    }
+
+    public void printBoard(List<IPosition> positions, Character marker) {
+        char[][] map = createEmptyBoard();
 
         for (IPosition pos : positions)
             map[pos.getRow()][pos.getColumn()] = marker;

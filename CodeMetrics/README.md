@@ -19,16 +19,31 @@ Foram identificados 80 métodos. `Tasks::taskD` é o mais complexo, CC=12 e
 É candidato a Extract Method, mas também contém caminhos impedidos pelos bugs
 de Game (#22), pelo que uma decomposição extensa fica para revisão posterior.
 
+## MetricsTree (exportação real)
+
+`metricstree-1e4f27a.xml` é a exportação **Export All Levels Metrics To XML File**
+do plugin MetricsTree, feita no commit `1e4f27a` do ramo `Refactoring_129823`:
+140 nós, 3 pacotes, 16 classes, 120 métodos e 2 959 métricas.
+
+`reports/LEI-129823/LEI-129823-Metrics.xlsx` é gerado a partir desse XML por
+`scripts/metrics_xml_to_excel.py` e tem as folhas Original, System, Package,
+Class, Method e Gráficos (CC decrescente e áreas empilhadas normalizadas
+CC/parâmetros/LOC).
+
+```sh
+python scripts/metrics_xml_to_excel.py CodeMetrics/metricstree-1e4f27a.xml \
+    -o reports/LEI-129823/LEI-129823-Metrics.xlsx
+```
+
 ## Evidência ainda necessária (individual)
 
+- Qodana: executado em modo headless; resultados em `reports/LEI-129823/qodana/`.
+  Falta apenas a captura da janela *Tools → Qodana* no IDE.
 - Selecionar o último commit do requisito da Ficha 2 antes do respetivo PR.
   #14/#15 não têm implementação/PR encontrados. `5dfcbeb` é a ponta do PR #17
   de documentação Ship/Barge, não prova a implementação dos requisitos.
-- Instalar/verificar Qodana e MetricsTree no IntelliJ; executar Inspect Code
-  (Java/Security), Qodana, guardar configuração real `qodana.yaml`, relatório e comentários.
-- Exportar XML **real** MetricsTree no commit histórico correto.
-- Criar `LEI-129823-Metrics.xlsx`, com folha original + System/Package/Class/Method,
-  gráfico CC decrescente e áreas empilhadas normalizadas CC/parâmetros/LOC.
+- Exportar o XML MetricsTree **histórico** em `5dfcbeb`; o XML versionado é do
+  head atual do ramo.
 - Confirmar limiares e fitness functions das figuras da ficha no plugin.
 
 ## Trabalho do grupo
