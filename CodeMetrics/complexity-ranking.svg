@@ -1,0 +1,244 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1250" height="1900">
+<rect width="100%" height="100%" fill="white"/>
+<text x="20" y="25" font-size="18">Lizard CC — current source — supplementary, not MetricsTree</text>
+<text x="20" y="60" font-size="12">Tasks::Tasks::taskD</text>
+<rect x="650" y="48" width="216" height="16" fill="#2563eb"/>
+<text x="871" y="60" font-size="12">12</text>
+<text x="20" y="83" font-size="12">Caravel::Caravel::Caravel</text>
+<rect x="650" y="71" width="144" height="16" fill="#2563eb"/>
+<text x="799" y="83" font-size="12">8</text>
+<text x="20" y="106" font-size="12">Carrack::Carrack::Carrack</text>
+<rect x="650" y="94" width="126" height="16" fill="#2563eb"/>
+<text x="781" y="106" font-size="12">7</text>
+<text x="20" y="129" font-size="12">Frigate::Frigate::Frigate</text>
+<rect x="650" y="117" width="126" height="16" fill="#2563eb"/>
+<text x="781" y="129" font-size="12">7</text>
+<text x="20" y="152" font-size="12">Galleon::Galleon::Galleon</text>
+<rect x="650" y="140" width="108" height="16" fill="#2563eb"/>
+<text x="763" y="152" font-size="12">6</text>
+<text x="20" y="175" font-size="12">Game::Game::printBoard</text>
+<rect x="650" y="163" width="108" height="16" fill="#2563eb"/>
+<text x="763" y="175" font-size="12">6</text>
+<text x="20" y="198" font-size="12">Ship::Ship::buildShip</text>
+<rect x="650" y="186" width="108" height="16" fill="#2563eb"/>
+<text x="763" y="198" font-size="12">6</text>
+<text x="20" y="221" font-size="12">Tasks::Tasks::taskC</text>
+<rect x="650" y="209" width="108" height="16" fill="#2563eb"/>
+<text x="763" y="221" font-size="12">6</text>
+<text x="20" y="244" font-size="12">Compass::charToCompass</text>
+<rect x="650" y="232" width="90" height="16" fill="#2563eb"/>
+<text x="745" y="244" font-size="12">5</text>
+<text x="20" y="267" font-size="12">Game::Game::fire</text>
+<rect x="650" y="255" width="90" height="16" fill="#2563eb"/>
+<text x="745" y="267" font-size="12">5</text>
+<text x="20" y="290" font-size="12">Tasks::Tasks::taskB</text>
+<rect x="650" y="278" width="90" height="16" fill="#2563eb"/>
+<text x="745" y="290" font-size="12">5</text>
+<text x="20" y="313" font-size="12">Fleet::Fleet::addShip</text>
+<rect x="650" y="301" width="72" height="16" fill="#2563eb"/>
+<text x="727" y="313" font-size="12">4</text>
+<text x="20" y="336" font-size="12">Fleet::Fleet::isInsideBoard</text>
+<rect x="650" y="324" width="72" height="16" fill="#2563eb"/>
+<text x="727" y="336" font-size="12">4</text>
+<text x="20" y="359" font-size="12">Game::Game::validShot</text>
+<rect x="650" y="347" width="72" height="16" fill="#2563eb"/>
+<text x="727" y="359" font-size="12">4</text>
+<text x="20" y="382" font-size="12">Position::Position::equals</text>
+<rect x="650" y="370" width="72" height="16" fill="#2563eb"/>
+<text x="727" y="382" font-size="12">4</text>
+<text x="20" y="405" font-size="12">Tasks::Tasks::taskA</text>
+<rect x="650" y="393" width="72" height="16" fill="#2563eb"/>
+<text x="727" y="405" font-size="12">4</text>
+<text x="20" y="428" font-size="12">Tasks::Tasks::buildFleet</text>
+<rect x="650" y="416" width="72" height="16" fill="#2563eb"/>
+<text x="727" y="428" font-size="12">4</text>
+<text x="20" y="451" font-size="12">Fleet::Fleet::getShipsLike</text>
+<rect x="650" y="439" width="54" height="16" fill="#2563eb"/>
+<text x="709" y="451" font-size="12">3</text>
+<text x="20" y="474" font-size="12">Fleet::Fleet::getFloatingShips</text>
+<rect x="650" y="462" width="54" height="16" fill="#2563eb"/>
+<text x="709" y="474" font-size="12">3</text>
+<text x="20" y="497" font-size="12">Fleet::Fleet::shipAt</text>
+<rect x="650" y="485" width="54" height="16" fill="#2563eb"/>
+<text x="709" y="497" font-size="12">3</text>
+<text x="20" y="520" font-size="12">Fleet::Fleet::colisionRisk</text>
+<rect x="650" y="508" width="54" height="16" fill="#2563eb"/>
+<text x="709" y="520" font-size="12">3</text>
+<text x="20" y="543" font-size="12">Galleon::Galleon::fillSouth</text>
+<rect x="650" y="531" width="54" height="16" fill="#2563eb"/>
+<text x="709" y="543" font-size="12">3</text>
+<text x="20" y="566" font-size="12">Game::Game::repeatedShot</text>
+<rect x="650" y="554" width="54" height="16" fill="#2563eb"/>
+<text x="709" y="566" font-size="12">3</text>
+<text x="20" y="589" font-size="12">Ship::Ship::stillFloating</text>
+<rect x="650" y="577" width="54" height="16" fill="#2563eb"/>
+<text x="709" y="589" font-size="12">3</text>
+<text x="20" y="612" font-size="12">Ship::Ship::getTopMostPos</text>
+<rect x="650" y="600" width="54" height="16" fill="#2563eb"/>
+<text x="709" y="612" font-size="12">3</text>
+<text x="20" y="635" font-size="12">Ship::Ship::getBottomMostPos</text>
+<rect x="650" y="623" width="54" height="16" fill="#2563eb"/>
+<text x="709" y="635" font-size="12">3</text>
+<text x="20" y="658" font-size="12">Ship::Ship::getLeftMostPos</text>
+<rect x="650" y="646" width="54" height="16" fill="#2563eb"/>
+<text x="709" y="658" font-size="12">3</text>
+<text x="20" y="681" font-size="12">Ship::Ship::getRightMostPos</text>
+<rect x="650" y="669" width="54" height="16" fill="#2563eb"/>
+<text x="709" y="681" font-size="12">3</text>
+<text x="20" y="704" font-size="12">Ship::Ship::occupies</text>
+<rect x="650" y="692" width="54" height="16" fill="#2563eb"/>
+<text x="709" y="704" font-size="12">3</text>
+<text x="20" y="727" font-size="12">Ship::Ship::tooCloseTo</text>
+<rect x="650" y="715" width="54" height="16" fill="#2563eb"/>
+<text x="709" y="727" font-size="12">3</text>
+<text x="20" y="750" font-size="12">Ship::Ship::tooCloseTo</text>
+<rect x="650" y="738" width="54" height="16" fill="#2563eb"/>
+<text x="709" y="750" font-size="12">3</text>
+<text x="20" y="773" font-size="12">Ship::Ship::shoot</text>
+<rect x="650" y="761" width="54" height="16" fill="#2563eb"/>
+<text x="709" y="773" font-size="12">3</text>
+<text x="20" y="796" font-size="12">Tasks::Tasks::firingRound</text>
+<rect x="650" y="784" width="54" height="16" fill="#2563eb"/>
+<text x="709" y="796" font-size="12">3</text>
+<text x="20" y="819" font-size="12">Fleet::Fleet::printShips</text>
+<rect x="650" y="807" width="36" height="16" fill="#2563eb"/>
+<text x="691" y="819" font-size="12">2</text>
+<text x="20" y="842" font-size="12">Galleon::Galleon::fillNorth</text>
+<rect x="650" y="830" width="36" height="16" fill="#2563eb"/>
+<text x="691" y="842" font-size="12">2</text>
+<text x="20" y="865" font-size="12">Galleon::Galleon::fillEast</text>
+<rect x="650" y="853" width="36" height="16" fill="#2563eb"/>
+<text x="691" y="865" font-size="12">2</text>
+<text x="20" y="888" font-size="12">Galleon::Galleon::fillWest</text>
+<rect x="650" y="876" width="36" height="16" fill="#2563eb"/>
+<text x="691" y="888" font-size="12">2</text>
+<text x="20" y="911" font-size="12">Game::Game::printFleet</text>
+<rect x="650" y="899" width="36" height="16" fill="#2563eb"/>
+<text x="691" y="911" font-size="12">2</text>
+<text x="20" y="934" font-size="12">Position::Position::isAdjacentTo</text>
+<rect x="650" y="922" width="36" height="16" fill="#2563eb"/>
+<text x="691" y="934" font-size="12">2</text>
+<text x="20" y="957" font-size="12">App::App::main</text>
+<rect x="650" y="945" width="18" height="16" fill="#2563eb"/>
+<text x="673" y="957" font-size="12">1</text>
+<text x="20" y="980" font-size="12">Barge::Barge::Barge</text>
+<rect x="650" y="968" width="18" height="16" fill="#2563eb"/>
+<text x="673" y="980" font-size="12">1</text>
+<text x="20" y="1003" font-size="12">Barge::Barge::getSize</text>
+<rect x="650" y="991" width="18" height="16" fill="#2563eb"/>
+<text x="673" y="1003" font-size="12">1</text>
+<text x="20" y="1026" font-size="12">Caravel::Caravel::getSize</text>
+<rect x="650" y="1014" width="18" height="16" fill="#2563eb"/>
+<text x="673" y="1026" font-size="12">1</text>
+<text x="20" y="1049" font-size="12">Carrack::Carrack::getSize</text>
+<rect x="650" y="1037" width="18" height="16" fill="#2563eb"/>
+<text x="673" y="1049" font-size="12">1</text>
+<text x="20" y="1072" font-size="12">Compass::Compass</text>
+<rect x="650" y="1060" width="18" height="16" fill="#2563eb"/>
+<text x="673" y="1072" font-size="12">1</text>
+<text x="20" y="1095" font-size="12">Compass::getDirection</text>
+<rect x="650" y="1083" width="18" height="16" fill="#2563eb"/>
+<text x="673" y="1095" font-size="12">1</text>
+<text x="20" y="1118" font-size="12">Compass::toString</text>
+<rect x="650" y="1106" width="18" height="16" fill="#2563eb"/>
+<text x="673" y="1118" font-size="12">1</text>
+<text x="20" y="1141" font-size="12">Fleet::Fleet::Fleet</text>
+<rect x="650" y="1129" width="18" height="16" fill="#2563eb"/>
+<text x="673" y="1141" font-size="12">1</text>
+<text x="20" y="1164" font-size="12">Fleet::Fleet::getShips</text>
+<rect x="650" y="1152" width="18" height="16" fill="#2563eb"/>
+<text x="673" y="1164" font-size="12">1</text>
+<text x="20" y="1187" font-size="12">Fleet::Fleet::printStatus</text>
+<rect x="650" y="1175" width="18" height="16" fill="#2563eb"/>
+<text x="673" y="1187" font-size="12">1</text>
+<text x="20" y="1210" font-size="12">Fleet::Fleet::printShipsByCategory</text>
+<rect x="650" y="1198" width="18" height="16" fill="#2563eb"/>
+<text x="673" y="1210" font-size="12">1</text>
+<text x="20" y="1233" font-size="12">Fleet::Fleet::printFloatingShips</text>
+<rect x="650" y="1221" width="18" height="16" fill="#2563eb"/>
+<text x="673" y="1233" font-size="12">1</text>
+<text x="20" y="1256" font-size="12">Fleet::Fleet::printAllShips</text>
+<rect x="650" y="1244" width="18" height="16" fill="#2563eb"/>
+<text x="673" y="1256" font-size="12">1</text>
+<text x="20" y="1279" font-size="12">Frigate::Frigate::getSize</text>
+<rect x="650" y="1267" width="18" height="16" fill="#2563eb"/>
+<text x="673" y="1279" font-size="12">1</text>
+<text x="20" y="1302" font-size="12">Galleon::Galleon::getSize</text>
+<rect x="650" y="1290" width="18" height="16" fill="#2563eb"/>
+<text x="673" y="1302" font-size="12">1</text>
+<text x="20" y="1325" font-size="12">Game::Game::Game</text>
+<rect x="650" y="1313" width="18" height="16" fill="#2563eb"/>
+<text x="673" y="1325" font-size="12">1</text>
+<text x="20" y="1348" font-size="12">Game::Game::getShots</text>
+<rect x="650" y="1336" width="18" height="16" fill="#2563eb"/>
+<text x="673" y="1348" font-size="12">1</text>
+<text x="20" y="1371" font-size="12">Game::Game::getRepeatedShots</text>
+<rect x="650" y="1359" width="18" height="16" fill="#2563eb"/>
+<text x="673" y="1371" font-size="12">1</text>
+<text x="20" y="1394" font-size="12">Game::Game::getInvalidShots</text>
+<rect x="650" y="1382" width="18" height="16" fill="#2563eb"/>
+<text x="673" y="1394" font-size="12">1</text>
+<text x="20" y="1417" font-size="12">Game::Game::getHits</text>
+<rect x="650" y="1405" width="18" height="16" fill="#2563eb"/>
+<text x="673" y="1417" font-size="12">1</text>
+<text x="20" y="1440" font-size="12">Game::Game::getSunkShips</text>
+<rect x="650" y="1428" width="18" height="16" fill="#2563eb"/>
+<text x="673" y="1440" font-size="12">1</text>
+<text x="20" y="1463" font-size="12">Game::Game::getRemainingShips</text>
+<rect x="650" y="1451" width="18" height="16" fill="#2563eb"/>
+<text x="673" y="1463" font-size="12">1</text>
+<text x="20" y="1486" font-size="12">Game::Game::printValidShots</text>
+<rect x="650" y="1474" width="18" height="16" fill="#2563eb"/>
+<text x="673" y="1486" font-size="12">1</text>
+<text x="20" y="1509" font-size="12">Position::Position::Position</text>
+<rect x="650" y="1497" width="18" height="16" fill="#2563eb"/>
+<text x="673" y="1509" font-size="12">1</text>
+<text x="20" y="1532" font-size="12">Position::Position::getRow</text>
+<rect x="650" y="1520" width="18" height="16" fill="#2563eb"/>
+<text x="673" y="1532" font-size="12">1</text>
+<text x="20" y="1555" font-size="12">Position::Position::getColumn</text>
+<rect x="650" y="1543" width="18" height="16" fill="#2563eb"/>
+<text x="673" y="1555" font-size="12">1</text>
+<text x="20" y="1578" font-size="12">Position::Position::hashCode</text>
+<rect x="650" y="1566" width="18" height="16" fill="#2563eb"/>
+<text x="673" y="1578" font-size="12">1</text>
+<text x="20" y="1601" font-size="12">Position::Position::occupy</text>
+<rect x="650" y="1589" width="18" height="16" fill="#2563eb"/>
+<text x="673" y="1601" font-size="12">1</text>
+<text x="20" y="1624" font-size="12">Position::Position::shoot</text>
+<rect x="650" y="1612" width="18" height="16" fill="#2563eb"/>
+<text x="673" y="1624" font-size="12">1</text>
+<text x="20" y="1647" font-size="12">Position::Position::isOccupied</text>
+<rect x="650" y="1635" width="18" height="16" fill="#2563eb"/>
+<text x="673" y="1647" font-size="12">1</text>
+<text x="20" y="1670" font-size="12">Position::Position::isHit</text>
+<rect x="650" y="1658" width="18" height="16" fill="#2563eb"/>
+<text x="673" y="1670" font-size="12">1</text>
+<text x="20" y="1693" font-size="12">Position::Position::toString</text>
+<rect x="650" y="1681" width="18" height="16" fill="#2563eb"/>
+<text x="673" y="1693" font-size="12">1</text>
+<text x="20" y="1716" font-size="12">Ship::Ship::Ship</text>
+<rect x="650" y="1704" width="18" height="16" fill="#2563eb"/>
+<text x="673" y="1716" font-size="12">1</text>
+<text x="20" y="1739" font-size="12">Ship::Ship::getCategory</text>
+<rect x="650" y="1727" width="18" height="16" fill="#2563eb"/>
+<text x="673" y="1739" font-size="12">1</text>
+<text x="20" y="1762" font-size="12">Ship::Ship::getPositions</text>
+<rect x="650" y="1750" width="18" height="16" fill="#2563eb"/>
+<text x="673" y="1762" font-size="12">1</text>
+<text x="20" y="1785" font-size="12">Ship::Ship::getPosition</text>
+<rect x="650" y="1773" width="18" height="16" fill="#2563eb"/>
+<text x="673" y="1785" font-size="12">1</text>
+<text x="20" y="1808" font-size="12">Ship::Ship::getBearing</text>
+<rect x="650" y="1796" width="18" height="16" fill="#2563eb"/>
+<text x="673" y="1808" font-size="12">1</text>
+<text x="20" y="1831" font-size="12">Ship::Ship::toString</text>
+<rect x="650" y="1819" width="18" height="16" fill="#2563eb"/>
+<text x="673" y="1831" font-size="12">1</text>
+<text x="20" y="1854" font-size="12">Tasks::Tasks::readShip</text>
+<rect x="650" y="1842" width="18" height="16" fill="#2563eb"/>
+<text x="673" y="1854" font-size="12">1</text>
+<text x="20" y="1877" font-size="12">Tasks::Tasks::readPosition</text>
+<rect x="650" y="1865" width="18" height="16" fill="#2563eb"/>
+<text x="673" y="1877" font-size="12">1</text>
+</svg>

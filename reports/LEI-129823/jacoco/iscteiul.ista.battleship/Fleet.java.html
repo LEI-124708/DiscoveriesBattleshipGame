@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Fleet.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Battleship</a> &gt; <a href="index.source.html" class="el_package">iscteiul.ista.battleship</a> &gt; <span class="el_source">Fleet.java</span></div><h1>Fleet.java</h1><pre class="source lang-java linenums">/**
+ *
+ */
+package iscteiul.ista.battleship;
+
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * Represents a player's fleet of ships in the Battleship game.
+ * &lt;p&gt;
+ * A {@code Fleet} keeps track of the {@link IShip} instances placed on a
+ * single {@value IFleet#BOARD_SIZE}&amp;times;{@value IFleet#BOARD_SIZE} board
+ * and enforces the game's placement rules (ships must stay inside the
+ * board and must not be too close to one another) when ships are added.
+ * &lt;/p&gt;
+ *
+ * @see IFleet
+ * @see IShip
+ */
+<span class="fc" id="L21">public class Fleet implements IFleet {</span>
+
+    /**
+     * Prints every ship in {@code ships} to standard output, one per line,
+     * using each ship's {@link Object#toString()} representation.
+     *
+     * @param ships the list of ships to print
+     */
+    static void printShips(List&lt;IShip&gt; ships) {
+<span class="fc bfc" id="L30" title="All 2 branches covered.">        for (IShip ship : ships)</span>
+<span class="fc" id="L31">            System.out.println(ship);</span>
+<span class="fc" id="L32">    }</span>
+
+    // -----------------------------------------------------
+
+    /** The ships currently placed in this fleet. */
+    private List&lt;IShip&gt; ships;
+
+    /**
+     * Creates an empty fleet, with no ships placed yet.
+     */
+<span class="fc" id="L42">    public Fleet() {</span>
+<span class="fc" id="L43">        ships = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L44">    }</span>
+
+    /**
+     * Returns the list of ships currently in this fleet.
+     *
+     * @return the fleet's ships; may be empty, never {@code null}
+     */
+    @Override
+    public List&lt;IShip&gt; getShips() {
+<span class="fc" id="L53">        return ships;</span>
+    }
+
+    /**
+     * Attempts to add a ship to this fleet.
+     * &lt;p&gt;
+     * The ship is only added if all of the following hold:
+     * &lt;/p&gt;
+     * &lt;ul&gt;
+     *   &lt;li&gt;the fleet has not yet reached its maximum ship count &amp;mdash;
+     *       note that, due to the {@code &lt;=} comparison against
+     *       {@link IFleet#FLEET_SIZE}, up to {@code FLEET_SIZE + 1} ships
+     *       are actually allowed (i.e. 11 ships in total, matching the
+     *       game's fleet composition: 1 Galeao, 1 Fragata, 2 Nau,
+     *       3 Caravela, 4 Barca);&lt;/li&gt;
+     *   &lt;li&gt;the ship fits entirely inside the board
+     *       ({@link #isInsideBoard(IShip)});&lt;/li&gt;
+     *   &lt;li&gt;the ship is not too close to any ship already in the fleet
+     *       ({@link #colisionRisk(IShip)}).&lt;/li&gt;
+     * &lt;/ul&gt;
+     *
+     * @param s the ship to add
+     * @return {@code true} if the ship was added, {@code false} if any of
+     *         the conditions above were not met
+     */
+    @Override
+    public boolean addShip(IShip s) {
+<span class="fc" id="L80">        boolean result = false;</span>
+<span class="fc bfc" id="L81" title="All 6 branches covered.">        if ((ships.size() &lt;= FLEET_SIZE) &amp;&amp; (isInsideBoard(s)) &amp;&amp; (!colisionRisk(s))) {</span>
+<span class="fc" id="L82">            ships.add(s);</span>
+<span class="fc" id="L83">            result = true;</span>
+        }
+<span class="fc" id="L85">        return result;</span>
+    }
+
+    /**
+     * Returns all ships in this fleet belonging to the given category.
+     *
+     * @param category the ship category to match (e.g. {@code &quot;Caravela&quot;})
+     * @return the ships in this fleet whose category equals {@code category};
+     *         may be empty, never {@code null}
+     */
+    @Override
+    public List&lt;IShip&gt; getShipsLike(String category) {
+<span class="fc" id="L97">        List&lt;IShip&gt; shipsLike = new ArrayList&lt;&gt;();</span>
+<span class="fc bfc" id="L98" title="All 2 branches covered.">        for (IShip s : ships)</span>
+<span class="fc bfc" id="L99" title="All 2 branches covered.">            if (s.getCategory().equals(category))</span>
+<span class="fc" id="L100">                shipsLike.add(s);</span>
+
+<span class="fc" id="L102">        return shipsLike;</span>
+    }
+
+    /**
+     * Returns all ships in this fleet that are still floating, i.e. that
+     * have not yet been completely hit.
+     *
+     * @return the ships in this fleet for which
+     *         {@link IShip#stillFloating()} is {@code true}; may be empty,
+     *         never {@code null}
+     */
+    @Override
+    public List&lt;IShip&gt; getFloatingShips() {
+<span class="fc" id="L115">        List&lt;IShip&gt; floatingShips = new ArrayList&lt;&gt;();</span>
+<span class="fc bfc" id="L116" title="All 2 branches covered.">        for (IShip s : ships)</span>
+<span class="fc bfc" id="L117" title="All 2 branches covered.">            if (s.stillFloating())</span>
+<span class="fc" id="L118">                floatingShips.add(s);</span>
+
+<span class="fc" id="L120">        return floatingShips;</span>
+    }
+
+    /**
+     * Returns the ship in this fleet that occupies the given position, if
+     * any.
+     *
+     * @param pos the position to check
+     * @return the ship occupying {@code pos}, or {@code null} if no ship in
+     *         this fleet occupies that position
+     */
+    @Override
+    public IShip shipAt(IPosition pos) {
+<span class="fc bfc" id="L133" title="All 2 branches covered.">        for (int i = 0; i &lt; ships.size(); i++)</span>
+<span class="fc bfc" id="L134" title="All 2 branches covered.">            if (ships.get(i).occupies(pos))</span>
+<span class="fc" id="L135">                return ships.get(i);</span>
+<span class="fc" id="L136">        return null;</span>
+    }
+
+    /**
+     * Checks whether a ship's cells all lie within the board boundaries
+     * (0 to {@value IFleet#BOARD_SIZE} &amp;minus; 1, inclusive, in both row
+     * and column).
+     *
+     * @param s the ship to check
+     * @return {@code true} if every cell of {@code s} is inside the board
+     */
+    private boolean isInsideBoard(IShip s) {
+<span class="fc bfc" id="L148" title="All 6 branches covered.">        return (s.getLeftMostPos() &gt;= 0 &amp;&amp; s.getRightMostPos() &lt;= BOARD_SIZE - 1 &amp;&amp; s.getTopMostPos() &gt;= 0</span>
+<span class="fc bfc" id="L149" title="All 2 branches covered.">                &amp;&amp; s.getBottomMostPos() &lt;= BOARD_SIZE - 1);</span>
+    }
+
+    /**
+     * Checks whether placing ship {@code s} would put it too close to any
+     * ship already present in this fleet (including diagonal adjacency).
+     *
+     * @param s the ship to check
+     * @return {@code true} if {@code s} is too close to at least one ship
+     *         already in the fleet
+     */
+    private boolean colisionRisk(IShip s) {
+<span class="fc bfc" id="L161" title="All 2 branches covered.">        for (int i = 0; i &lt; ships.size(); i++) {</span>
+<span class="fc bfc" id="L162" title="All 2 branches covered.">            if (ships.get(i).tooCloseTo(s))</span>
+<span class="fc" id="L163">                return true;</span>
+        }
+<span class="fc" id="L165">        return false;</span>
+    }
+
+
+    /**
+     * Prints the full status of this fleet to standard output: all ships,
+     * then only the floating ones, then the ships grouped by each of the
+     * five known categories (Galeao, Fragata, Nau, Caravela, Barca).
+     */
+    public void printStatus() {
+<span class="fc" id="L175">        printAllShips();</span>
+<span class="fc" id="L176">        printFloatingShips();</span>
+<span class="fc" id="L177">        printShipsByCategory(&quot;Galeao&quot;);</span>
+<span class="fc" id="L178">        printShipsByCategory(&quot;Fragata&quot;);</span>
+<span class="fc" id="L179">        printShipsByCategory(&quot;Nau&quot;);</span>
+<span class="fc" id="L180">        printShipsByCategory(&quot;Caravela&quot;);</span>
+<span class="fc" id="L181">        printShipsByCategory(&quot;Barca&quot;);</span>
+<span class="fc" id="L182">    }</span>
+
+    /**
+     * Prints all the ships of this fleet belonging to a particular
+     * category.
+     *
+     * @param category the category of ships of interest; must not be
+     *                  {@code null}
+     */
+    public void printShipsByCategory(String category) {
+<span class="fc bfc" id="L192" title="All 2 branches covered.">        assert category != null;</span>
+
+<span class="fc" id="L194">        printShips(getShipsLike(category));</span>
+<span class="fc" id="L195">    }</span>
+
+    /**
+     * Prints all the ships of this fleet that are still floating (i.e.
+     * not yet fully hit).
+     */
+    public void printFloatingShips() {
+<span class="fc" id="L202">        printShips(getFloatingShips());</span>
+<span class="fc" id="L203">    }</span>
+
+    /**
+     * Prints all the ships currently in this fleet, regardless of state.
+     */
+    void printAllShips() {
+<span class="fc" id="L209">        printShips(ships);</span>
+<span class="fc" id="L210">    }</span>
+
+}
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.14.202510111229</span></div></body></html>
