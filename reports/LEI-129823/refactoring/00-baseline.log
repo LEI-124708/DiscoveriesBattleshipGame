@@ -1,0 +1,93 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------------< iscteiul.ista:Battleship >----------------------
+[INFO] Building Battleship 1.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ Battleship ---
+[INFO] Deleting /Users/pedro/Documents/Codex/2026-11-06/referenced-chatgpt-conversation-this-is-an/work/DiscoveriesBattleshipGame/target
+[INFO] 
+[INFO] --- jacoco:0.8.14:prepare-agent (default) @ Battleship ---
+[INFO] argLine set to -javaagent:/Users/pedro/Documents/Codex/2026-11-06/referenced-chatgpt-conversation-this-is-an/work/DiscoveriesBattleshipGame/../m2/org/jacoco/org.jacoco.agent/0.8.14/org.jacoco.agent-0.8.14-runtime.jar=destfile=/Users/pedro/Documents/Codex/2026-11-06/referenced-chatgpt-conversation-this-is-an/work/DiscoveriesBattleshipGame/target/jacoco.exec
+[INFO] 
+[INFO] --- resources:3.4.0:resources (default-resources) @ Battleship ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ Battleship ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 16 source files with javac [debug release 17] to target/classes
+[INFO] Annotation processing is enabled because one or more processors were found
+  on the class path. A future release of javac may disable annotation processing
+  unless at least one processor is specified by name (-processor), or a search
+  path is specified (--processor-path, --processor-module-path), or annotation
+  processing is enabled explicitly (-proc:only, -proc:full).
+  Use -Xlint:-options to suppress this message.
+  Use -proc:none to disable annotation processing.
+[INFO] 
+[INFO] --- resources:3.4.0:testResources (default-testResources) @ Battleship ---
+[INFO] skip non existing resourceDirectory /Users/pedro/Documents/Codex/2026-11-06/referenced-chatgpt-conversation-this-is-an/work/DiscoveriesBattleshipGame/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ Battleship ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 12 source files with javac [debug release 17] to target/test-classes
+[INFO] Annotation processing is enabled because one or more processors were found
+  on the class path. A future release of javac may disable annotation processing
+  unless at least one processor is specified by name (-processor), or a search
+  path is specified (--processor-path, --processor-module-path), or annotation
+  processing is enabled explicitly (-proc:only, -proc:full).
+  Use -Xlint:-options to suppress this message.
+  Use -proc:none to disable annotation processing.
+[INFO] 
+[INFO] --- surefire:3.5.4:test (default-test) @ Battleship ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running iscteiul.ista.AppTest
+2026-11-06T13:20:26.995383Z main INFO Starting configuration XmlConfiguration[location=/Users/pedro/Documents/Codex/2026-11-06/referenced-chatgpt-conversation-this-is-an/work/DiscoveriesBattleshipGame/target/classes/log4j2.xml, lastModified=2026-11-06T13:20:24.664Z]...
+2026-11-06T13:20:26.996589Z main INFO Configuration XmlConfiguration[location=/Users/pedro/Documents/Codex/2026-11-06/referenced-chatgpt-conversation-this-is-an/work/DiscoveriesBattleshipGame/target/classes/log4j2.xml, lastModified=2026-11-06T13:20:24.664Z] started.
+2026-11-06T13:20:26.998362Z main INFO Stopping configuration org.apache.logging.log4j.core.config.DefaultConfiguration@c27a3a2...
+2026-11-06T13:20:26.998735Z main INFO Configuration org.apache.logging.log4j.core.config.DefaultConfiguration@c27a3a2 stopped.
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.378 s -- in iscteiul.ista.AppTest
+[INFO] Running iscteiul.ista.battleship.BargeTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.047 s -- in iscteiul.ista.battleship.BargeTest
+[INFO] Running iscteiul.ista.battleship.GameTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.062 s -- in iscteiul.ista.battleship.GameTest
+[INFO] Running iscteiul.ista.battleship.CompassTest
+[INFO] Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.021 s -- in iscteiul.ista.battleship.CompassTest
+[INFO] Running iscteiul.ista.battleship.FleetTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 s -- in iscteiul.ista.battleship.FleetTest
+[INFO] Running iscteiul.ista.battleship.FrigateTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 s -- in iscteiul.ista.battleship.FrigateTest
+[INFO] Running iscteiul.ista.battleship.CaravelTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s -- in iscteiul.ista.battleship.CaravelTest
+[INFO] Running iscteiul.ista.battleship.CarrackTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s -- in iscteiul.ista.battleship.CarrackTest
+[INFO] Running iscteiul.ista.battleship.PositionTest
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 s -- in iscteiul.ista.battleship.PositionTest
+[INFO] Running iscteiul.ista.battleship.GalleonTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 s -- in iscteiul.ista.battleship.GalleonTest
+[INFO] Running iscteiul.ista.battleship.ShipTest
+[INFO] Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.018 s -- in iscteiul.ista.battleship.ShipTest
+[INFO] Running iscteiul.ista.battleship.TasksTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.016 s -- in iscteiul.ista.battleship.TasksTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 79, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jar:3.5.0:jar (default-jar) @ Battleship ---
+[INFO] Building jar: /Users/pedro/Documents/Codex/2026-11-06/referenced-chatgpt-conversation-this-is-an/work/DiscoveriesBattleshipGame/target/Battleship-1.0-SNAPSHOT.jar
+[INFO] 
+[INFO] --- jacoco:0.8.14:report (coverage) @ Battleship ---
+[INFO] Loading execution data file /Users/pedro/Documents/Codex/2026-11-06/referenced-chatgpt-conversation-this-is-an/work/DiscoveriesBattleshipGame/target/jacoco.exec
+[INFO] Analyzed bundle 'Battleship' with 13 classes
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  3.648 s
+[INFO] Finished at: 2026-11-06T13:20:27Z
+[INFO] ------------------------------------------------------------------------

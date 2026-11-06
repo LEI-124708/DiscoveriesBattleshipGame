@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Ship.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Battleship</a> &gt; <a href="index.source.html" class="el_package">iscteiul.ista.battleship</a> &gt; <span class="el_source">Ship.java</span></div><h1>Ship.java</h1><pre class="source lang-java linenums">/**
+ * Representa a implementação base de um navio do jogo.
+ *
+ * &lt;p&gt;Um navio possui uma categoria, uma orientação, uma posição inicial
+ * e uma lista com todas as posições ocupadas no tabuleiro.&lt;/p&gt;
+ *
+ * &lt;p&gt;As subclasses determinam o tamanho e preenchem a lista de posições
+ * ocupadas pelo respetivo tipo de navio.&lt;/p&gt;
+ *
+ * @see IShip
+ * @see Barge
+ * @see Caravel
+ * @see Carrack
+ * @see Frigate
+ * @see Galleon
+ */
+package iscteiul.ista.battleship;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+<span class="fc" id="L23">public abstract class Ship implements IShip {</span>
+
+    private static final String GALEAO = &quot;galeao&quot;;
+    private static final String FRAGATA = &quot;fragata&quot;;
+    private static final String NAU = &quot;nau&quot;;
+    private static final String CARAVELA = &quot;caravela&quot;;
+    private static final String BARCA = &quot;barca&quot;;
+
+    /**
+     * Cria um navio do tipo indicado.
+     *
+     * @param shipKind categoria do navio; deve corresponder a
+     *                 {@code barca}, {@code caravela}, {@code nau},
+     *                 {@code fragata} ou {@code galeao}
+     * @param bearing orientação do navio no tabuleiro
+     * @param pos posição inicial do navio
+     * @return o navio criado ou {@code null} quando a categoria não é reconhecida
+     */
+    static Ship buildShip(String shipKind, Compass bearing, Position pos) {
+<span class="fc bfc" id="L42" title="All 6 branches covered.">        return switch (shipKind) {</span>
+<span class="fc" id="L43">            case BARCA -&gt; new Barge(bearing, pos);</span>
+<span class="fc" id="L44">            case CARAVELA -&gt; new Caravel(bearing, pos);</span>
+<span class="fc" id="L45">            case NAU -&gt; new Carrack(bearing, pos);</span>
+<span class="fc" id="L46">            case FRAGATA -&gt; new Frigate(bearing, pos);</span>
+<span class="fc" id="L47">            case GALEAO -&gt; new Galleon(bearing, pos);</span>
+<span class="fc" id="L48">            default -&gt; null;</span>
+        };
+    }
+
+    private String category;
+    private Compass bearing;
+    private IPosition pos;
+    protected List&lt;IPosition&gt; positions;
+
+
+    /**
+     * Inicializa os atributos comuns a todos os navios.
+     *
+     * @param category categoria do navio
+     * @param bearing orientação do navio no tabuleiro
+     * @param pos posição inicial do navio
+     */ 
+<span class="fc" id="L65">    public Ship(String category, Compass bearing, IPosition pos) {</span>
+<span class="fc bfc" id="L66" title="All 2 branches covered.">        assert bearing != null;</span>
+<span class="fc bfc" id="L67" title="All 2 branches covered.">        assert pos != null;</span>
+
+<span class="fc" id="L69">        this.category = category;</span>
+<span class="fc" id="L70">        this.bearing = bearing;</span>
+<span class="fc" id="L71">        this.pos = pos;</span>
+<span class="fc" id="L72">        positions = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L73">    }</span>
+
+    /**
+     * Devolve a categoria do navio.
+     *
+     * @return categoria do navio
+     */
+    @Override
+    public String getCategory() {
+<span class="fc" id="L82">        return category;</span>
+    }
+
+    /**
+     * Devolve as posições ocupadas pelo navio no tabuleiro.
+     *
+     * @return lista de posições ocupadas pelo navio
+     */
+    public List&lt;IPosition&gt; getPositions() {
+<span class="fc" id="L91">        return positions;</span>
+    }
+
+    /**
+     * Devolve a posição inicial do navio.
+     *
+     * @return posição inicial do navio
+     */
+    @Override
+    public IPosition getPosition() {
+<span class="fc" id="L101">        return pos;</span>
+    }
+
+    /**
+     * Devolve a orientação do navio.
+     *
+     * @return orientação do navio no tabuleiro
+     */
+    @Override
+    public Compass getBearing() {
+<span class="fc" id="L111">        return bearing;</span>
+    }
+
+    /**
+     * Verifica se o navio ainda possui pelo menos uma posição não atingida.
+     *
+     * @return {@code true} se o navio ainda estiver a flutuar;
+     *         {@code false} se todas as suas posições tiverem sido atingidas
+     */
+    @Override
+    public boolean stillFloating() {
+<span class="fc bfc" id="L122" title="All 2 branches covered.">        for (int i = 0; i &lt; getSize(); i++)</span>
+<span class="fc bfc" id="L123" title="All 2 branches covered.">            if (!getPositions().get(i).isHit())</span>
+<span class="fc" id="L124">                return true;</span>
+<span class="fc" id="L125">        return false;</span>
+    }
+
+    /**
+     * Obtém a linha mais acima ocupada pelo navio.
+     *
+     * @return índice da linha superior ocupada
+     */
+    @Override
+    public int getTopMostPos() {
+<span class="fc" id="L135">        int top = getPositions().get(0).getRow();</span>
+<span class="fc bfc" id="L136" title="All 2 branches covered.">        for (int i = 1; i &lt; getSize(); i++)</span>
+<span class="pc bpc" id="L137" title="1 of 2 branches missed.">            if (getPositions().get(i).getRow() &lt; top)</span>
+<span class="nc" id="L138">                top = getPositions().get(i).getRow();</span>
+<span class="fc" id="L139">        return top;</span>
+    }
+
+    /**
+     * Obtém a linha mais abaixo ocupada pelo navio.
+     *
+     * @return índice da linha inferior ocupada
+     */
+    @Override
+    public int getBottomMostPos() {
+<span class="fc" id="L149">        int bottom = getPositions().get(0).getRow();</span>
+<span class="fc bfc" id="L150" title="All 2 branches covered.">        for (int i = 1; i &lt; getSize(); i++)</span>
+<span class="fc bfc" id="L151" title="All 2 branches covered.">            if (getPositions().get(i).getRow() &gt; bottom)</span>
+<span class="fc" id="L152">                bottom = getPositions().get(i).getRow();</span>
+<span class="fc" id="L153">        return bottom;</span>
+    }
+
+    /**
+     * Obtém a coluna mais à esquerda ocupada pelo navio.
+     *
+     * @return índice da coluna mais à esquerda
+     */
+    @Override
+    public int getLeftMostPos() {
+<span class="fc" id="L163">        int left = getPositions().get(0).getColumn();</span>
+<span class="fc bfc" id="L164" title="All 2 branches covered.">        for (int i = 1; i &lt; getSize(); i++)</span>
+<span class="fc bfc" id="L165" title="All 2 branches covered.">            if (getPositions().get(i).getColumn() &lt; left)</span>
+<span class="fc" id="L166">                left = getPositions().get(i).getColumn();</span>
+<span class="fc" id="L167">        return left;</span>
+    }
+
+    /**
+     * Obtém a coluna mais à direita ocupada pelo navio.
+     *
+     * @return índice da coluna mais à direita
+     */
+    @Override
+    public int getRightMostPos() {
+<span class="fc" id="L177">        int right = getPositions().get(0).getColumn();</span>
+<span class="fc bfc" id="L178" title="All 2 branches covered.">        for (int i = 1; i &lt; getSize(); i++)</span>
+<span class="fc bfc" id="L179" title="All 2 branches covered.">            if (getPositions().get(i).getColumn() &gt; right)</span>
+<span class="fc" id="L180">                right = getPositions().get(i).getColumn();</span>
+<span class="fc" id="L181">        return right;</span>
+    }
+
+    /**
+     * Verifica se o navio ocupa uma determinada posição.
+     *
+     * @param pos posição que se pretende verificar
+     * @return {@code true} se a posição for ocupada pelo navio;
+     *         {@code false} caso contrário
+     */
+    @Override
+    public boolean occupies(IPosition pos) {
+<span class="fc bfc" id="L193" title="All 2 branches covered.">        assert pos != null;</span>
+
+<span class="fc bfc" id="L195" title="All 2 branches covered.">        for (int i = 0; i &lt; getSize(); i++)</span>
+<span class="fc bfc" id="L196" title="All 2 branches covered.">            if (getPositions().get(i).equals(pos))</span>
+<span class="fc" id="L197">                return true;</span>
+<span class="fc" id="L198">        return false;</span>
+    }
+
+    /**
+     * Verifica se este navio está demasiado próximo de outro navio.
+     *
+     * &lt;p&gt;Dois navios estão demasiado próximos quando alguma das posições
+     * ocupadas por um deles é adjacente a uma posição ocupada pelo outro.&lt;/p&gt;
+     *
+     * @param other outro navio
+     * @return {@code true} se os navios estiverem demasiado próximos;
+     *         {@code false} caso contrário
+     */
+    @Override
+    public boolean tooCloseTo(IShip other) {
+<span class="fc bfc" id="L213" title="All 2 branches covered.">        assert other != null;</span>
+
+<span class="fc" id="L215">        Iterator&lt;IPosition&gt; otherPos = other.getPositions().iterator();</span>
+<span class="fc bfc" id="L216" title="All 2 branches covered.">        while (otherPos.hasNext())</span>
+<span class="fc bfc" id="L217" title="All 2 branches covered.">            if (tooCloseTo(otherPos.next()))</span>
+<span class="fc" id="L218">                return true;</span>
+
+<span class="fc" id="L220">        return false;</span>
+    }
+
+    /**
+     * Verifica se uma posição está adjacente a alguma posição deste navio.
+     *
+     * @param pos posição que se pretende verificar
+     * @return {@code true} se a posição estiver demasiado próxima do navio;
+     *         {@code false} caso contrário
+     */
+    @Override
+    public boolean tooCloseTo(IPosition pos) {
+<span class="fc bfc" id="L232" title="All 2 branches covered.">        for (int i = 0; i &lt; this.getSize(); i++)</span>
+<span class="fc bfc" id="L233" title="All 2 branches covered.">            if (getPositions().get(i).isAdjacentTo(pos))</span>
+<span class="fc" id="L234">                return true;</span>
+<span class="fc" id="L235">        return false;</span>
+    }
+
+
+    /**
+     * Regista um tiro numa posição ocupada pelo navio.
+     *
+     * &lt;p&gt;Se a posição indicada pertencer ao navio, essa posição é marcada
+     * como atingida. Se não pertencer, o estado do navio não é alterado.&lt;/p&gt;
+     *
+     * @param pos posição atingida pelo tiro
+     */
+    @Override
+    public void shoot(IPosition pos) {
+<span class="fc bfc" id="L249" title="All 2 branches covered.">        assert pos != null;</span>
+
+<span class="fc bfc" id="L251" title="All 2 branches covered.">        for (IPosition position : getPositions()) {</span>
+<span class="fc bfc" id="L252" title="All 2 branches covered.">            if (position.equals(pos))</span>
+<span class="fc" id="L253">                position.shoot();</span>
+<span class="fc" id="L254">        }</span>
+<span class="fc" id="L255">    }</span>
+
+
+    /**
+     * Produz uma representação textual do navio.
+     *
+     * @return texto com a categoria, orientação e posição inicial do navio
+     */
+    @Override
+    public String toString() {
+<span class="fc" id="L265">        return &quot;[&quot; + category + &quot; &quot; + bearing + &quot; &quot; + pos + &quot;]&quot;;</span>
+    }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.14.202510111229</span></div></body></html>
