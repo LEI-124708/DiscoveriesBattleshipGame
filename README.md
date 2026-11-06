@@ -84,3 +84,22 @@ A partida se encerra quando um dos jogadores atinge todos os navios de seu adver
 
 
 ---------
+
+## Testes e integração contínua (Fichas 3/4)
+
+Requer Java 17 ou posterior e Maven 3.9; validação local com Java 21.
+`mvn --batch-mode clean verify` compila, executa JUnit Jupiter 6.0.0 e gera
+cobertura JaCoCo 0.8.14 em `target/site/jacoco/index.html` (XML e CSV incluídos).
+JUnit 6 segue o requisito inicial da Ficha 4; a referência posterior a JUnit 5
+é tratada como referência à API Jupiter, utilizada por estes testes.
+
+O workflow `.github/workflows/maven.yml` executa em cada push e pull request,
+com Java 21 e relatórios como artifacts. Uma execução local bem sucedida não
+prova que Actions passou: verificar a execução associada ao commit do PR.
+Não há exclusões artificiais de classes para aumentar percentagens.
+Os testes `KNOWN DEFECT` caracterizam defeitos existentes, não comportamento
+correto; ver issue #22. Devem ser convertidos em regressão quando corrigidos.
+
+Ver `reports/LEI-129823/README.md`, `CodeMetrics/README.md` e
+`RefactoringOpportunities.md`. Os testes de apoio ao grupo não substituem a
+reunião de distribuição individual. #14 (IA) e #15 (JSON) continuam pendentes.
