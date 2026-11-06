@@ -31,3 +31,5 @@ Os testes KNOWN DEFECT reproduzem #22, não atestam correção. Os ramos de Game
 Âmbito individual: Ship/Barge têm antecedente no PR #17 de LEI-129823. Os testes das restantes classes são contribuição de apoio ao grupo; não existe evidência de rateio coletivo aprovado. Este relatório de toda a bateria não substitui o relatório IntelliJ filtrado pelas classes individuais após esse acordo.
 
 Actions: confirmar execução remota correspondente ao commit do PR; o build local não a substitui. #14/#15 continuam pendentes.
+
+Os caminhos locais dos logs/XML foram normalizados para `${PROJECT_ROOT}`; resultados, contagens e cobertura não foram alterados.
