@@ -1,0 +1,12 @@
+* UnitTests_129823                                  19072f9 Merge remote-tracking branch 'origin/main'
+  main                                              19072f9 [origin/main] Merge remote-tracking branch 'origin/main'
+  remotes/origin/Fixing-style-issue                 2c1288d separators
+  remotes/origin/HEAD                               -> origin/main
+  remotes/origin/actions/pr-notification            27755d8 ci: add pull request notification workflow
+  remotes/origin/docs/javadoc-game                  c5ba24b Adicionado Javadoc para a classe Game
+  remotes/origin/docs/javadoc-position              a97374b "Finalizado Javadoc da Classe Position"
+  remotes/origin/docs/regras-adicionais             a7ae5ba Adicionada Secção "Regras Adicionais"
+  remotes/origin/javadoc---Galleon,-Fleet-&-Caravel cc353d0 Update Fleet.java
+  remotes/origin/javadoc---Ship,-Barge              5dfcbeb Enhance Barge class documentation
+  remotes/origin/javadocs                           5b9e00b docs: adicionar Javadocs às embarcações
+  remotes/origin/main                               19072f9 Merge remote-tracking branch 'origin/main'
