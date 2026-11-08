@@ -1,0 +1,14 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+Battleship,iscteiul.ista,App,3,8,0,0,1,3,1,1,1,1
+Battleship,iscteiul.ista.battleship,Caravel,5,68,1,8,1,13,1,7,0,3
+Battleship,iscteiul.ista.battleship,Frigate,0,66,0,7,0,12,0,7,0,3
+Battleship,iscteiul.ista.battleship,Position,0,122,0,14,0,24,0,18,0,11
+Battleship,iscteiul.ista.battleship,Compass,0,71,0,5,0,18,0,9,0,5
+Battleship,iscteiul.ista.battleship,Game,39,243,2,30,6,45,3,27,2,12
+Battleship,iscteiul.ista.battleship,Galleon,5,234,1,16,1,35,1,16,0,7
+Battleship,iscteiul.ista.battleship,Carrack,0,66,0,7,0,12,0,7,0,3
+Battleship,iscteiul.ista.battleship,Tasks,33,284,4,47,7,86,4,35,1,9
+Battleship,iscteiul.ista.battleship,Fleet,0,214,0,34,0,48,0,31,0,14
+Battleship,iscteiul.ista.battleship,IFleet,0,7,0,0,0,2,0,1,0,1
+Battleship,iscteiul.ista.battleship,Ship,7,338,1,51,1,65,1,44,0,17
+Battleship,iscteiul.ista.battleship,Barge,0,23,0,0,0,5,0,3,0,3
